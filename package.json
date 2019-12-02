@@ -7,6 +7,9 @@
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0"
   },
+  "scripts": {
+    "start": "node index.js"
+  }
   "devDependencies": {
     "webpack-dev-server": "2.11.2"
   }
