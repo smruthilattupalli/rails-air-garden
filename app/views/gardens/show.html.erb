@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <p> <%= link_to "Back to menu", root_path, class:"btn btn-primary"  %></p>
+      <p> <%= link_to "Back to menu", root_path, class:"btn btn-ghost"  %></p>
       <h1> <%=  @garden.title %> </h1>
 
       <div class="card-trip card-trip-show">
-        <img src="https://res.cloudinary.com/dlo5xbrsn/image/upload/v1575380786/hal-ozart-MyRBq7GoVK0-unsplash_ptwfvg.jpg" />
+        <%= cl_image_tag(@garden.photo) %>
         <div class="card-trip-infos">
           <div>
             <h2 class="mb-4"><%= @garden.description %></h2>
@@ -24,7 +24,7 @@
           </div>
           <div>
           <h2 class="card-trip-pricing"><%= @garden.price %> €</h2>
-          <a class="btn btn-flat" href="#">Book now</a>
+          <a class="btn-ghost" href="#">Book now</a>
           </div>
           <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user-avatar" />
         </div>
