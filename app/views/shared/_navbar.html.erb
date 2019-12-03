@@ -17,7 +17,7 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Logout", destroy_user_session_path, class: "btn btn-ghost" %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-ghost" %>
         </li>
       <% end %>
         <li class="nav-item">
