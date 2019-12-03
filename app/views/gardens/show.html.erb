@@ -1,1 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p> <%= link_to "Back to menu", gardens_path, class:"btn btn-primary"  %></p>
+      <h1> <%=  @garden.title %> </h1>
 
+      <%= image_tag("", height: 300, width: 400, crop: :fill) %>
+
+      <p><%= @garden.description %></p>
+      <p><i class="fas fa-hand-holding-usd"></i> <strong>Price : </strong> <%= @garden.price %>€</p>
+      <p><i class="fas fa-map-marker-alt"></i> <strong> Location : </strong><%= @garden.location %></p>
+      <p><i class="fas fa-users"></i><strong> Capacity : </strong><%= @garden.capacity %></p>
+      <p><i class="fas fa-ruler-combined"></i><strong> Size : </strong> <%= @garden.size %>m2</p>
+
+
+    </div>
+  </div>
+</div>
