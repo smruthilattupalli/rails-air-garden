@@ -1,0 +1,16 @@
+.btn-ghost {
+  color: $green;
+  border: 1px solid $green;
+  padding: 8px 24px;
+  border-radius: 50px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  background-color: white;
+}
+
+.btn-ghost:hover {
+  opacity: 0.5;
+  color: $green;
+  background-color: white;
+}
+
