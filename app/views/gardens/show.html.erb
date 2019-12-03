@@ -7,12 +7,18 @@
       <%= image_tag("", height: 300, width: 400, crop: :fill) %>
 
       <p><%= @garden.description %></p>
-      <p><i class="fas fa-hand-holding-usd"></i> <strong>Price : </strong> <%= @garden.price %>€</p>
-      <p><i class="fas fa-map-marker-alt"></i> <strong> Location : </strong><%= @garden.location %></p>
-      <p><i class="fas fa-users"></i><strong> Capacity : </strong><%= @garden.capacity %></p>
-      <p><i class="fas fa-ruler-combined"></i><strong> Size : </strong> <%= @garden.size %>m2</p>
 
+      <p class="bold"><i class="fas fa-hand-holding-usd"></i>  Price</p>
+      <p> <%= @garden.price %>€ </p>
+      <p class="bold"><i class="fas fa-map-marker-alt"></i>  Location</p>
+      <p><%= @garden.location %></p>
+      <p class="bold"><i class="fas fa-users"></i>  Capacity</p>
+      <p><%= @garden.capacity %></p>
+      <p class="bold"><i class="fas fa-ruler-combined"></i>  Size </p>
+      <p><%= @garden.size %>m2</p>
+      <a class="btn btn-flat" href="#">Book now</a>
 
     </div>
+
   </div>
 </div>
