@@ -1,18 +1,37 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <p> <%= link_to "Back to menu", gardens_path, class:"btn btn-primary"  %></p>
+      <p> <%= link_to "Back to menu", root_path, class:"btn btn-primary"  %></p>
       <h1> <%=  @garden.title %> </h1>
 
-      <%= image_tag("", height: 300, width: 400, crop: :fill) %>
-
-      <p><%= @garden.description %></p>
-      <p><i class="fas fa-hand-holding-usd"></i> <strong>Price : </strong> <%= @garden.price %>€</p>
-      <p><i class="fas fa-map-marker-alt"></i> <strong> Location : </strong><%= @garden.location %></p>
-      <p><i class="fas fa-users"></i><strong> Capacity : </strong><%= @garden.capacity %></p>
-      <p><i class="fas fa-ruler-combined"></i><strong> Size : </strong> <%= @garden.size %>m2</p>
-
-
+      <div class="card-trip card-trip-show">
+        <img src="https://res.cloudinary.com/dlo5xbrsn/image/upload/v1575380786/hal-ozart-MyRBq7GoVK0-unsplash_ptwfvg.jpg" />
+        <div class="card-trip-infos">
+          <div>
+            <h2 class="mb-4"><%= @garden.description %></h2>
+            <div class="d-flex w-25 justify-content-between align-items-center">
+              <p><i class="fas fa-map-marker-alt"></i><div class="bold">Location</div></p>
+              <p style="font-size: 16px;"><%= @garden.location %></p>
+              </div>
+              <div class="d-flex w-25 justify-content-between align-items-center">
+             <p><i class="fas fa-users"></i><div class="bold">Capacity</div> </p>
+             <p style="font-size: 16px;"><%= @garden.capacity %></p>
+             </div>
+             <div class="d-flex w-25 justify-content-between align-items-center">
+             <p><i class="fas fa-ruler-combined"></i><div class="bold"> Size</div></p>
+             <p style="font-size: 16px";><%= @garden.size %>m2</p>
+             </div>
+          </div>
+          <div>
+          <h2 class="card-trip-pricing"><%= @garden.price %> €</h2>
+          <a class="btn btn-flat" href="#">Book now</a>
+          </div>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user-avatar" />
+        </div>
+      </d iv>
     </div>
+    </div>
+
+
   </div>
 </div>
