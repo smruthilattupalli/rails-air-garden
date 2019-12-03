@@ -2,8 +2,14 @@ h1 {
  font-family: 'Raleway', sans-serif;
 }
 
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
 p {
   font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
 }
 
 .btn-flat {
@@ -12,10 +18,7 @@ p {
   border-radius: 4px;
   background: #1EDD88;
   transition: background 0.3s ease;
-  display: inline-block;
+  height: 70px;
+  width: 100px;
 }
 
-.bold {
-  font-weight: bold;
-  font-size: 16px;
-}

@@ -37,3 +37,32 @@
   top: -20px;
   width: 40px;
 }
+
+.card-trip-show > img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.card-trip .card-trip-infos .bold {
+  font-size: 18px;
+  font-family: "Raleway";
+  font-weight: 400;
+  margin: 4px;
+
+}
+
+.card-trip-pricing {
+padding: 15px;
+justify-content: center;
+}
+
+.card-trip-infos .card-trip-user-avatar{
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 80px;
+  border-radius: 50%
+}
+
