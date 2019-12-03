@@ -21,3 +21,8 @@
 .navbar-light .navbar-brand {
     color: $green;
 }
+
+.navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
+    color: $green;
+    opacity: 0.5;
+}
