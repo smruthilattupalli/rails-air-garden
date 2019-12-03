@@ -1,15 +1,21 @@
 <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
 
-  <h2>Post a new garden >> </h2>
+      <h2>Host a new garden</h2>
 
-  <%= simple_form_for(@garden) do |g| %>
-    <%= g.input :title %>
-    <%= g.input :description %>
-    <%= g.input :price %>
-    <%= g.input :location %>
-    <%= g.input :capacity %>
-    <%= g.input :size %>
+      <%= simple_form_for(@garden) do |g| %>
+        <%= g.input :title %>
+        <%= g.input :description %>
+        <%= g.input :price %>
+        <%= g.input :location %>
+        <%= g.input :capacity %>
+        <%= g.input :size %>
+        <%= g.input :photo %>
+        <%= g.input :photo_cache, as: :hidden %>
 
-    <%= g.submit class: "btn btn-primary" %>
-  <% end %>
+        <%= g.submit class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
 </div>
