@@ -29,9 +29,6 @@
 
 .card-trip a {
   text-decoration: none;
-  &:hover {
-    text-decoration: none;
-  }
 }
 
 
@@ -67,7 +64,15 @@
 
   p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+    font-size: 18px;
+  }
+   &:hover {
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  a:not([href]) {
+    color: $green;
   }
 }
 
@@ -79,10 +84,34 @@
 
 }
 
-.card-trip-pricing {
-padding: 15px;
-justify-content: center;
+.price-tag-wrap-show {
+position: absolute;
+top: 68px;
+right: 28px;
 }
+
+.price-tag {
+  position: relative;
+  width: 0px;
+  height: 0px;
+  border-right: 29px solid $green;
+  border-top: 60px solid $green;
+  border-left: 29px solid $green;
+  border-bottom: 16px solid transparent;
+}
+
+.price-tag-content {
+    position: absolute;
+    top: -50px;
+    right: -17px;
+    text-align: center;
+    color: white;
+}
+
+.price-tag-content h3 {
+  margin-left: 5px;
+}
+
 
 .card-trip-infos .card-trip-user-avatar{
   position: absolute;
@@ -90,5 +119,15 @@ justify-content: center;
   top: -20px;
   width: 80px;
   border-radius: 50%
+}
+
+.card-trip-infos .btn-ghost {
+  &:hover {
+  opacity: 1;
+  color: white;
+  background-color: $green;
+  }
+
+
 }
 
