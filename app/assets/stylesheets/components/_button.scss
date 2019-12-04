@@ -6,11 +6,13 @@
   opacity: 1;
   transition: opacity 0.3s ease;
   background-color: white;
+  font-weight: bold;
+  font-style: normal;
 }
 
 .btn-ghost:hover {
-  opacity: 0.5;
-  color: $green;
-  background-color: white;
+  opacity: 1;
+  color: white;
+  background-color: $green;
 }
 

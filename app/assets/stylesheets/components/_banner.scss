@@ -1,7 +1,7 @@
 .my-banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 270px 0;
   background-image: asset-url('banner2.jpeg');
 }
 
@@ -9,13 +9,18 @@
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 37px;
   font-weight: bold;
 }
 
 .my-banner p {
-  font-size: 20px;
+  font-size: 23px;
   color: white;
   opacity: .9;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-weight: bold;
+}
+
+.w-50 {
+  width: 32% !important;
 }
