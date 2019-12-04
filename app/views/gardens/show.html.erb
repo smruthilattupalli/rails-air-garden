@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <p> <%= link_to "Back to menu", root_path, class:"btn btn-ghost"  %></p>
+      <p> <%= link_to "Back to menu", gardens_path, class:"btn btn-ghost"  %></p>
       <h1> <%=  @garden.title %> </h1>
 
       <div class="card-trip card-trip-show">
@@ -10,17 +10,24 @@
           <div>
             <h2 class="mb-4"><%= @garden.description %></h2>
             <div class="d-flex w-50 justify-content-between align-items-center">
-              <p><i class="fas fa-map-marker-alt"></i><%= @garden.location %></p>
+              <i class="fas fa-map-marker-alt"></i><p><%= @garden.location %></p>
             </div>
             <div class="d-flex w-50 justify-content-between align-items-center">
-             <p><i class="fas fa-users"></i><%= @garden.capacity %></p>
+             <i class="fas fa-users"></i><p><%= @garden.capacity %></p>
            </div>
            <div class="d-flex w-50 justify-content-between align-items-center">
-             <p><i class="fas fa-ruler-combined"></i><%= @garden.size %>m2</p>
+             <i class="fas fa-ruler-combined"></i><p><%= @garden.size %>m2</p>
            </div>
          </div>
          <div>
-          <h2 class="card-trip-pricing"><%= @garden.price %> €</h2>
+          <div class="price-tag-wrap-show">
+            <div class="price-tag">
+              <div class="price-tag-content">
+                <h3><%= @garden.price %> €</h3>
+                <h3>/Day</h3>
+              </div>
+            </div>
+          </div>
           <a class="btn-ghost">Book now</a>
         </div>
         <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user-avatar" />

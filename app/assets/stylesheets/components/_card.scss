@@ -67,7 +67,7 @@
 
   p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
   }
    &:hover {
     opacity: 1;
@@ -87,10 +87,34 @@
 
 }
 
-.card-trip-pricing {
-padding: 15px;
-justify-content: center;
+.price-tag-wrap-show {
+position: absolute;
+top: 68px;
+right: 28px;
 }
+
+.price-tag {
+  position: relative;
+  width: 0px;
+  height: 0px;
+  border-right: 29px solid #28CC9E;
+  border-top: 60px solid #28CC9E;
+  border-left: 29px solid #28CC9E;
+  border-bottom: 16px solid transparent;
+}
+
+.price-tag-content {
+    position: absolute;
+    top: -50px;
+    right: -17px;
+    text-align: center;
+    color: white;
+}
+
+.price-tag-content h3 {
+  margin-left: 5px;
+}
+
 
 .card-trip-infos .card-trip-user-avatar{
   position: absolute;
