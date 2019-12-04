@@ -10,21 +10,18 @@
           <div>
             <h2 class="mb-4"><%= @garden.description %></h2>
             <div class="d-flex w-50 justify-content-between align-items-center">
-              <p><i class="fas fa-map-marker-alt"></i><div class="bold">Location</div></p>
-              <p style="font-size: 16px;"><%= @garden.location %></p>
+              <p><i class="fas fa-map-marker-alt"></i><%= @garden.location %></p>
             </div>
             <div class="d-flex w-50 justify-content-between align-items-center">
-             <p><i class="fas fa-users"></i><div class="bold">Capacity</div> </p>
-             <p style="font-size: 16px;"><%= @garden.capacity %></p>
+             <p><i class="fas fa-users"></i><%= @garden.capacity %></p>
            </div>
-           <div class="d-flex w-25 justify-content-between align-items-center">
-             <p><i class="fas fa-ruler-combined"></i><div class="bold"> Size</div></p>
-             <p style="font-size: 16px";><%= @garden.size %>m2</p>
+           <div class="d-flex w-50 justify-content-between align-items-center">
+             <p><i class="fas fa-ruler-combined"></i><%= @garden.size %>m2</p>
            </div>
          </div>
          <div>
           <h2 class="card-trip-pricing"><%= @garden.price %> €</h2>
-          <a class="btn-ghost" href="#">Book now</a>
+          <a class="btn-ghost">Book now</a>
         </div>
         <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user-avatar" />
       </div>
