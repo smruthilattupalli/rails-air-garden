@@ -50,11 +50,25 @@
   width: 40px;
 }
 
-.card-trip-show > img {
-  height: 400px;
-  width: 100%;
-  object-fit: cover;
+.card-trip-show {
+   > img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+  h1 {
+   font-family: 'Raleway', sans-serif;
+  }
 
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+  }
+
+  p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+  }
 }
 
 .card-trip .card-trip-infos .bold {
