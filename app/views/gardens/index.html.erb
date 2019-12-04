@@ -1,28 +1,35 @@
-<div class="container">
-  <div class="d-flex justify-content-center mt-3 mb-3">
-    <label for="searchLocationField"></label>
-    <input type="string" id="searchLocationField" value="location">
-    <input type="submit" class="btn-ghost">
-  </div>
-</div>
-<div class="container minimum-height">
-  <div class="row">
-    <% Garden.all.each do |garden| %>
-    <div class="col-3">
-    <%= link_to garden_path(garden) do %>
-      <div class="card-trip">
-        <%= cl_image_tag(garden.photo) %>
-        <div class="card-trip-infos">
-
-            <h2><%= garden.title %></h2>
-
-          <h2 class="card-trip-pricing"><%= garden.price %> €</h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-        </div>
+<div class="index-container d-flex justify-content-between pl-2">
+  <div id="left-part flex-grow-1 flex-fill">
+    <div class="container">
+      <div class="d-flex justify-content-left mt-3 mb-3">
+        <label for="searchLocationField"></label>
+        <input type="string" id="searchLocationField" placeholder="location">
+        <input type="submit" class="btn-ghost">
       </div>
     </div>
-    <% end %>
-    <% end %>
+    <h1 class="ml-3">More than 300 gardens for your location</h1>
+    <div class="container minimum-height">
+      <div class="row">
+        <% Garden.all.each do |garden| %>
+        <div class="col-4 mt-2">
+          <%= link_to garden_path(garden) do %>
+          <div class="card-trip">
+            <%= cl_image_tag(garden.photo) %>
+            <div class="card-trip-infos">
+              <h2><%= garden.title %></h2>
+
+              <h2 class="card-trip-pricing"><%= garden.price %> €</h2>
+              <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+            </div>
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
   </div>
+  <div id="right-part">
+  </div>
+
 </div>
 
