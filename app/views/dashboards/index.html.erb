@@ -1,2 +1,53 @@
-<h1>Dashboards#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<div class="container pt-3">
+  <h2>Welcome <%= current_user.first_name %></h2>
+</div>
+
+<div class="container minimum-height d-flex justify-content-between mt-5">
+  <div class="left-dashboard col-6 pr-5">
+    <% if @bookings != [] %>
+    <h3>Bookings made:</h3>
+    <% @bookings.each do |booking| %>
+    <%= link_to booking_path(booking) do %>
+    <div class="card-product mb-3">
+      <%= cl_image_tag(booking.garden.photo) %>
+      <div class="card-product-infos">
+        <h2><%= booking.garden.title %></h2>
+        <p>Price: <%= booking.total_price %> €</p>
+        <p>Start date: <%= booking.start_date %> End date: <%= booking.end_date %></p>
+        <p>Status: <%= booking.status %></p>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+    <% else %>
+    <h3>No bookings made so far...</h3>
+    <% end %>
+  </div>
+
+  <div class="right-dashboard col-6 pl-5 h-100">
+    <% if @gardens == [] %>
+    <p>No gardens up for rent...</p>
+    <% else %>
+    <h3>Bookings received:</h3>
+    <% @gardens.each do |garden_host| %>
+    <% garden_host.bookings.each do |booking_received| %>
+    <%= link_to booking_path(booking_received) do %>
+    <div class="card-product mb-3">
+      <%= cl_image_tag(booking_received.garden.photo) %>
+      <div class="card-product-infos">
+        <h2><%= booking_received.garden.title %></h2>
+        <p>Price: <%= booking_received.total_price %> €</p>
+        <p>Start date: <%= booking_received.start_date %> End date: <%= booking_received.end_date %></p>
+        <p>Status: <%= booking_received.status %></p>
+      </div>
+    </div>
+    <% end %>
+
+    <% end %>
+    <% end %>
+    <% end %>
+
+  </div>
+
+</div>
+

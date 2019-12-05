@@ -1,0 +1,14 @@
+// .shadow-container {
+//     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+// }
+
+.right-dashboard {
+  border-left: 3px dotted $green;
+}
+
+.right-dashboard a, .left-dashboard a {
+  color: black;
+  &:hover {
+    color: black;
+  }
+}
