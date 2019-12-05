@@ -1,0 +1,13 @@
+h2  {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
+.on-hover {
+  &:hover {
+    opacity: 1;
+  }
+}
