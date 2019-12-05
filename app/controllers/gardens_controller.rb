@@ -1,5 +1,6 @@
 class GardensController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
+
   def index
     @gardens = Garden.all
   end
@@ -13,7 +14,7 @@ class GardensController < ApplicationController
   end
 
   def create
-    @garden = @garden = Garden.new(set_garden_params)
+    @garden = Garden.new(set_garden_params)
     @garden.user = current_user
     if @garden.save
       redirect_to garden_path(@garden)
