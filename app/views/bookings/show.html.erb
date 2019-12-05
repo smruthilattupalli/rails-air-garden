@@ -1,2 +1,14 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+<div class="container minimum-height">
+  <h1>Bookings Details</h1>
+
+  <div class="card-product">
+    <%= cl_image_tag (@booking.garden.photo) %>
+    <div class="card-product-infos">
+      <h2><%= @booking.garden.title %></h2>
+      <p><%= @booking.garden.description%></p>
+    </div>
+  </div>
+
+</div>
+
+
