@@ -5,18 +5,19 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @garden = Garden.find(params[:garden_id])
   end
 
   def create
     @booking = Booking.new(set_booking_params)
     @booking.user = current_user
-
-    @booking.garden = Garden.find(params[:garden_id])
+    @garden = Garden.find(params[:garden_id])
+    @booking.garden = @garden
     @booking.total_price = compute_price(@booking)
 
     if @booking.save
-      redirect_to booking_path(@booking)
-    else
+      redirect_to dashboards_path
+      else
       render :new
     end
   end
