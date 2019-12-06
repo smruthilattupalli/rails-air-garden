@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   resources :dashboards, only: :index
 
   resources :gardens, only: %i[new create show index] do
-    resources :bookings, only: %i[new create update]
+    resources :bookings, only: %i[create update]
   end
 end

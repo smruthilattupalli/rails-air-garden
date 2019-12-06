@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 2019_12_05_164553) do
     t.string "status", default: "Pending"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "number_of_guests"
+    t.string "booking_type"
     t.index ["garden_id"], name: "index_bookings_on_garden_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end

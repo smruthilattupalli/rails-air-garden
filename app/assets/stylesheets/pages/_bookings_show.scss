@@ -6,8 +6,25 @@ h2  {
   font-size: 20px;
 }
 
-.on-hover {
+.list-group-item i {
+  color: $green;
+  text-decoration: none;
+  font-size: 22px;
+  margin-right: 5px;
+}
+
+.booking-card {
+  margin: 10px auto;
+}
+
+.card-body i {
+  font-size: 36px;
+  padding: 10px;
   &:hover {
-    opacity: 1;
+    opacity: .7;
   }
+}
+
+.reject-icon i {
+  color: $red;
 }
