@@ -5,26 +5,35 @@
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
-        <div class="card-product">
+        <%= link_to garden_path(@booking.garden) do %>
+          <div class="card-product">
 
-          <%= cl_image_tag (@booking.garden.photo) %>
-          <div class="card-product-infos">
-            <h2><%= @booking.garden.title %></h2>
-            <p><%= @booking.garden.description%></p>
-          </div>
-
-          <% if @booking.garden.user == current_user && @booking.status == "Pending" %>
-            <div class="card-body" align="right">
-              <%= link_to "<i class='fas fa-check-circle'></i>".html_safe, accept_booking_path(@booking) %>
-              <%= link_to "<i class='fas fa-times-circle'></i>".html_safe, reject_booking_path(@booking), class: "reject-icon" %>
+            <%= cl_image_tag (@booking.garden.photo) %>
+            <div class="card-product-infos">
+              <h2><%= @booking.garden.title %></h2>
+              <p><%= @booking.garden.description%></p>
             </div>
-          <% end %>
-        </div>
+
+            <% if @booking.garden.user == current_user && @booking.status == "Pending" %>
+              <div class="card-body" align="right">
+                <%= link_to "<i class='fas fa-check-circle'></i>".html_safe, accept_booking_path(@booking) %>
+                <%= link_to "<i class='fas fa-times-circle'></i>".html_safe, reject_booking_path(@booking), class: "reject-icon" %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
       </li>
       <li class="list-group-item"><i class="fas fa-hashtag"></i>Booking id: <%= @booking.id %></li>
-      <li class="list-group-item"><i class="fas fa-user"></i>Guest: <%= @booking.user.email %></li>
+      <li class="list-group-item d-inline-flex justify-content-between align-items-center">
+        <div>
+          <i class="fas fa-user"></i>Guest: <%= @booking.user.email %>
+        </div>
+        <div align="right">
+          <%= "View user details" %>
+        </div>
+      </li>
       <li class="list-group-item"><i class="fas fa-map-marker-alt"></i>Location: <%= @booking.garden.location %></li>
-      <li class="list-group-item"><i class="fas fa-users"></i>No. of guests: <%= @booking.garden.capacity %></li>
+      <li class="list-group-item"><i class="fas fa-users"></i>No. of guests: <%= @booking.number_of_guests %></li>
       <li class="list-group-item"><i class="fas fa-hashtag"></i>Booking status: <%= @booking.status %></li>
       <li class="list-group-item"><i class="far fa-calendar-alt"></i>Checkin-date: <%= @booking.start_date %> ---- Checkout-date: <%= @booking.end_date %></li>
       <li class="list-group-item"><i class="fas fa-euro-sign"></i>Total Price: <%= @booking.total_price %></li>

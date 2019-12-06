@@ -42,13 +42,13 @@
         </div>
       </div>
     </div>
-    <div id="right-part">
+    <div id="right-part" style="height: 100%;">
      <div
      id="map"
      style="width: 100%;
-     height: 800px;
+     height: 100%;
      z-index:-1;"
-     class="minimum-height mb-5"
+     class="minimum-height-map"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
      ></div>

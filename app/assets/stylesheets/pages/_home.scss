@@ -1,4 +1,15 @@
 // Specific CSS for your home-page
 .sign-in-image {
-  background-image: asset-url('default_picture_garden.jpg')
+
+  background-image: asset-url('grass1.jpg');
+  background-size: cover;
+  background-position: center;
+
+  .myform-outline {
+    background-color: #F4F4F4;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+    padding: 15px;
+  }
 }
