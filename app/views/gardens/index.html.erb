@@ -2,42 +2,54 @@
   <div id="left-part flex-grow-1 flex-fill">
     <div class="container">
       <div class="d-flex justify-content-left mt-3 mb-3">
-        <label for="searchLocationField"></label>
-        <input type="string" id="searchLocationField" placeholder="Location">
-        <input type="submit" class="btn-ghost">
-      </div>
-    </div>
-    <h2 class="ml-3">More than 300 gardens for your location</h2>
-    <div class="container minimum-height">
-      <div class="row">
-        <% Garden.all.each do |garden| %>
-        <div class="col-4 mt-2">
-          <%= link_to garden_path(garden) do %>
-          <div class="card-trip">
-            <%= cl_image_tag(garden.photo) %>
-            <div class="card-trip-details">
-              <h2><%= garden.title %></h2>
+        <div>
+          <%= form_tag gardens_path, method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+            placeholder: "Location"
+            %>
+          </div>
+          <div>
+            <%= submit_tag "Search", class: "btn-ghost ml-2 btn-inline" %>
+            <% end %>
 
-              <h2 class="card-trip-pricing"><%= garden.price %> €</h2>
-              <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-            </div>
           </div>
         </div>
-        <% end %>
-        <% end %>
+      </div>
+      <h2 class="ml-3">More than <%= @gardens.size %> garden(s) around you</h2>
+      <div class="container minimum-height">
+        <div class="row">
+          <% @gardens.all.each do |garden| %>
+          <div class="col-4 mt-2">
+            <%= link_to garden_path(garden) do %>
+            <div class="card-trip">
+              <%= cl_image_tag(garden.photo) %>
+              <div class="card-trip-details">
+                <h2><%= garden.title %></h2>
+
+                <h2 class="card-trip-pricing"><%= garden.price %> €</h2>
+                <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+              </div>
+            </div>
+          </div>
+          <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
-  <div id="right-part">
-   <div
-   id="map"
-   style="width: 100%;
-   height: 600px;"
-   data-markers="<%= @markers.to_json %>"
-   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-   ></div>
+    <div id="right-part">
+     <div
+     id="map"
+     style="width: 100%;
+     height: 800px;
+     z-index:-1;"
+     class="minimum-height mb-5"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+     ></div>
+
+   </div>
 
  </div>
-
-</div>
 
