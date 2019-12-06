@@ -3,11 +3,6 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
-  def new
-    @booking = Booking.new
-    @garden = Garden.find(params[:garden_id])
-  end
-
   def create
     @booking = Booking.new(set_booking_params)
     @booking.user = current_user
@@ -17,19 +12,21 @@ class BookingsController < ApplicationController
 
     if @booking.save
       redirect_to dashboards_path
-      else
+    else
       render :new
     end
   end
 
   def accept
     @booking = Booking.find(params[:id])
-    @booking.status = 'Accepted'
+    @booking.update(status: 'Accepted')
+    redirect_to booking_path(@booking)
   end
 
   def reject
     @booking = Booking.find(params[:id])
-    @booking.status = 'Rejected'
+    @booking.update(status: 'Rejected')
+    redirect_to booking_path(@booking)
   end
 
   def destroy
