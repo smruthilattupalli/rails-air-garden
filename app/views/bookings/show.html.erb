@@ -5,12 +5,14 @@
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
-        <div class="card-product on-hover">
+        <div class="card-product">
+
           <%= cl_image_tag (@booking.garden.photo) %>
           <div class="card-product-infos">
             <h2><%= @booking.garden.title %></h2>
             <p><%= @booking.garden.description%></p>
           </div>
+
           <% if @booking.garden.user == current_user && @booking.status == "Pending" %>
             <div class="card-body" align="right">
               <%= link_to "<i class='fas fa-check-circle'></i>".html_safe, accept_booking_path(@booking) %>
