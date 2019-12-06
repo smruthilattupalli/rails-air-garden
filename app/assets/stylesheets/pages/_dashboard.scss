@@ -3,7 +3,7 @@
 // }
 
 .right-dashboard {
-  border-left: 3px dotted $green;
+  border-left: 1px solid $green;
 }
 
 .right-dashboard a, .left-dashboard a {
@@ -12,3 +12,9 @@
     color: black;
   }
 }
+
+.left-dashboard {
+  border-right: 1px solid $green;
+
+}
+
