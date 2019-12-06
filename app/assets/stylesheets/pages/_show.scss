@@ -1,9 +1,14 @@
 .card-category h1 {
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 37px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0);
+  font-size: 24px;
   font-weight: bold;
+}
+
+.card-category-show h1 {
+  font-size: 30px;
 }
 
 .card-category h2 {
@@ -20,10 +25,9 @@
 }
 
 .price-tag-content h3 {
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Montserrat", "sans-serif";
-  font-weight: bold;
-  margin: 10px;
+  font-weight: bolder;
 }
 
 .card-trip-infos i {
