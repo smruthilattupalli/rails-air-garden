@@ -17,7 +17,7 @@
       <h2 class="ml-3">More than 300 gardens for your location</h2>
       <div class="container minimum-height">
         <div class="row">
-          <% Garden.all.each do |garden| %>
+          <% @gardens.all.each do |garden| %>
           <div class="col-4 mt-2">
             <%= link_to garden_path(garden) do %>
             <div class="card-trip">

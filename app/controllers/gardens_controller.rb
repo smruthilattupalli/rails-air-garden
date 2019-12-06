@@ -2,7 +2,11 @@ class GardensController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    @gardens = Garden.geocoded
+    if params[:query].present?
+      @gardens = Garden.near(params[:query], 10)
+    else
+      @gardens = Garden.geocoded
+    end
     @markers = @gardens.map do |garden|
       {
         lat: garden.latitude,
