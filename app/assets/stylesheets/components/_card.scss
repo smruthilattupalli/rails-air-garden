@@ -93,8 +93,8 @@ right: 28px;
 
 .price-tag {
   position: relative;
-  width: 0px;
-  height: 0px;
+  width: 58px;
+  height: 99px;
   border-right: 29px solid $green;
   border-top: 60px solid $green;
   border-left: 29px solid $green;
@@ -103,14 +103,10 @@ right: 28px;
 
 .price-tag-content {
     position: absolute;
-    top: -50px;
-    right: -17px;
+    top: -48px;
+    right: -21px;
     text-align: center;
     color: white;
-}
-
-.price-tag-content h3 {
-  margin-left: 5px;
 }
 
 
@@ -150,13 +146,16 @@ right: 28px;
 
 .card-trip-dates {
   position: relative;
-  padding: 16px;
-  height: 280px;
+  padding: 20px;
+  height: 470px;
   border-radius: 10px;
 
-  h2 {
-    font-size: 20px;
+  h1 {
+    font-size: 24px;
     padding-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0);
+    font-weight: bold;
   }
 
 
@@ -223,5 +222,14 @@ right: 28px;
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+#card-trip-stars {
+  padding: 0;
+  margin: 0;
+}
+
+.card-trip-rating {
+  margin-left: 10px;
 }
 

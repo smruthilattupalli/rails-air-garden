@@ -1,5 +1,8 @@
 <%= simple_form_for ([garden, booking]) do |b| %>
 <%= b.input :start_date, as: :date, class: "booking-date" %>
 <%= b.input :end_date, as: :date, class: "booking-date" %>
-<%= b.submit "Book now", class:"btn-ghost" %>
+<%= b.input :number_of_guests %>
+<%= b.input :booking_type %>
+<div align="center"><%= b.submit "Book now", class:"btn-ghost" %>
+</div>
 <% end %>
