@@ -1,9 +1,8 @@
 <div class="container pt-3">
-  <h2>Welcome <%= current_user.first_name %></h2>
-</div>
 
-<div class="container minimum-height d-flex justify-content-between mt-5">
-  <div class="left-dashboard col-6 pr-5">
+  <h2 class="pl-3 uniforming-h2">Welcome <%= current_user.first_name %>!</h2>
+<div class="minimum-height d-flex justify-content-between mt-5">
+  <div class="left-dashboard col-6 pr-5 h-100">
     <% if @bookings != [] %>
     <h3>Bookings made:</h3>
     <% @bookings.each do |booking| %>
@@ -20,13 +19,13 @@
     <% end %>
     <% end %>
     <% else %>
-    <h3>No bookings made so far...</h3>
+    <h3><%= pluralize current_user.bookings.size, "bookings" %></h3>
     <% end %>
   </div>
 
   <div class="right-dashboard col-6 pl-5 h-100">
     <% if @gardens == [] %>
-    <p>No gardens up for rent...</p>
+    <h3><%= pluralize current_user.gardens.size, "gardens" %></p>
     <% else %>
     <h3>Bookings received:</h3>
     <% @gardens.each do |garden_host| %>
@@ -48,6 +47,6 @@
     <% end %>
 
   </div>
-
 </div>
+
 

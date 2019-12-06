@@ -17,7 +17,11 @@
           </div>
         </div>
       </div>
-      <h2 class="ml-3">More than <%= @gardens.size %> garden(s) around you</h2>
+      <% if @gardens.size == 1 %>
+      <h2 class="ml-3"><%= pluralize @gardens.size, "garden" %> near you</h2>
+      <% else %>
+      <h2 class="ml-3"><%= pluralize @gardens.size, "gardens" %> near you</h2>
+      <% end %>
       <div class="container minimum-height">
         <div class="row">
           <% @gardens.all.each do |garden| %>
