@@ -2,7 +2,14 @@ class GardensController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    @gardens = Garden.all
+    @gardens = Garden.geocoded
+    @markers = @gardens.map do |garden|
+      {
+        lat: garden.latitude,
+        lng: garden.longitude,
+        infoWindow: render_to_string(partial: 'info_window', locals: { garden: garden })
+      }
+    end
   end
 
   def show
