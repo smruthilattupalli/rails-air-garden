@@ -1,4 +1,4 @@
-.btn-ghost {
+/*.btn-ghost {
   color: $green;
   border: 1px solid $green;
   padding: 8px 24px;
@@ -14,7 +14,29 @@
     color: white;
     background-color: $green;
   }
+}*/
+
+.btn-ghost {
+  opacity: 1;
+  color: white;
+  background-color: $green;
+  border: 1px solid $green;
+  padding: 8px 24px;
+  border-radius: 50px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+
+  font-weight: bold;
+  font-style: normal;
+
+  &:hover {
+
+    color: $green;
+    background-color: white;
+  }
 }
 
 
-
+.btn-inline {
+  padding: 6px 16px;
+}
